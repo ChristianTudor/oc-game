@@ -1,0 +1,313 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px;
+    height: 100vh;
+    width: 100vw;
+}
+
+#header {
+    width: 700px;
+    height: 100px;
+    background-color: white;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.logo img {
+    height: 60px;
+    width: 60px;
+    margin: 10px 10px 10px 20px;
+}
+
+.logo {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+    background-color: #f1463f;
+    clip-path: polygon(0 0, 100% 0, 250px 100%, 0 100%);
+}
+
+.title {
+    text-align: center;
+    margin-left: 35px;
+    color: white;
+}
+
+.title h3 {
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    line-height: 1.4em;
+    font-size: 1.4em;
+    color: white;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+#btn-play,
+#btn-reload {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+    padding: 10px 10px 2px 10px;
+}
+
+#btn-play,
+#btn-reload:focus {
+    outline: none;
+}
+
+i {
+    color: #f1463f;
+    font-size: 45px;
+}
+
+#players_info {
+    background-color: white;
+    width: 1200px;
+    height: 100px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    display: flex;
+}
+
+#p1_left,
+#player1,
+#player2 {
+    flex-grow: 1;
+}
+
+.active {
+    background-color: rgba(245, 245, 245, 0.801);
+}
+
+
+.name_health {
+    display: flex;
+    margin-top: 16px;
+    justify-content: center;
+}
+
+.player-name,
+h4 {
+    line-height: 25px;
+    letter-spacing: 0.1em;
+    word-spacing: 0.1em;
+    color: #334d5a;
+    margin-right: 10px;
+}
+
+.health-bar {
+    background-color: #f1463f;
+    width: 350px;
+}
+
+.red {
+    height: 25px;
+    width: 90%;
+    background-color: #334d5a;
+}
+
+#message_middle {
+    width: 400px;
+    background-color: rgba(51, 77, 90, 0.849);
+}
+
+#middle_text {
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 35px;
+    font-weight: bold;
+    line-height: 25px;
+    letter-spacing: 0.2em;
+    word-spacing: 0.2em;
+    color: white;
+}
+
+#p2_right {
+    width: 400px;
+    background-color: rgba(245, 245, 245, 0.801);
+}
+
+#text-message {
+    margin-top: 30px;
+    color: #334d5a;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    word-spacing: 0.1em;
+    font-size: 1.3em;
+}
+
+.gameboard {
+    width: 600px;
+    height: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin-top: 50px;
+}
+
+.row {
+    display: flex;
+    flex: auto;
+}
+
+.cell {
+    flex: auto;
+    width: 100%;
+    border: 1px solid#334D5A;
+    background-size: cover;
+}
+
+.grass {
+    background-color: whitesmoke;
+}
+
+.player1 {
+    background-image: url("./images/baboon.png") !important;
+}
+
+.player2 {
+    background-image: url("./images/monkey.png") !important;
+}
+
+.rock {
+    background-image: url("./images/wall.png");
+}
+
+.weapon1 {
+    background-image: url("./images/gloves_1.png");
+}
+
+.weapon2 {
+    background-image: url("./images/baseball-bat.png");
+}
+
+.weapon3 {
+    background-image: url("./images/knife_1.png");
+}
+
+.weapon4 {
+    background-image: url("./images/axe_3.png");
+}
+
+.weapon5 {
+    background-image: url("./images/gun_2.png");
+}
+
+#version {
+    margin-top: 10px;
+    color: #334d5a;
+}
+
+.container {
+    width: 1200px;
+    height: 900px;
+    background-color: white;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    background-color: rgba(245, 245, 245, 0.801);
+}
+
+.footer {
+    color: #fff;
+    transition: 2s;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -120px;
+    padding: 15px 20px;
+    background-color: #f1463f;
+    height: 120px;
+}
+
+.button-group {
+    display: flex;
+}
+
+#footer-text {
+    font-size: 1.3em;
+}
+
+#attack-btn,
+#defend-button {
+    flex-grow: 1;
+    margin: 5px 15px;
+    padding: 10px 15px;
+    background: white;
+    border: none;
+    color: #334d5a;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+#attack-btn,
+#defend-button:focus {
+    outline: none;
+}
+
+#weapon_img_player1 {
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+    border: 2.1px #f1463f solid;
+    margin-right: 10px;
+}
+
+#weapon_img_player2 {
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+    border: 2.1px #f1463f solid;
+    margin-right: 10px;
+}
+
+.player1_weapon {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.player2_weapon {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#weapon_name_player2,
+#weapon_name_player1,
+#weapon_dmg_player2,
+#weapon_dmg_player1,
+.weapon-name {
+    color: #334d5a;
+    margin-right: 10px;
+}
+
+.player-info-weapon {
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+    border: 2.1px #f1463f solid;
+    margin-right: 10px;
+}
